@@ -12,7 +12,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 sh 'docker rm -f jenkins-docker-demo-container || true'
-                sh 'docker run -d --name jenkins-docker-demo-container -p 8080:80 jenkins-docker-demo'
+                sh 'docker run -d --name jenkins-docker-demo-container -p 80:80 jenkins-docker-demo'
             }
         }
     }
